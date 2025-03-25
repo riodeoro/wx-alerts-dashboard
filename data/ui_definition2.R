@@ -25,13 +25,11 @@ fire_centers <- c(
   "Coastal Fire Centre"
 )
 
-ui <- fluidPage(
             
+ ui <- fluidPage(
   tags$head(
-    tags$meta(name = "viewport", 
-                     content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"),
-            includeCSS("www/styles.css"),
     tags$link(rel = "stylesheet", type = "text/css", href = "www/styles.css"),
+    
     
     tags$script(HTML("
       $(document).ready(function() {
