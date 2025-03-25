@@ -26,11 +26,11 @@ fire_centers <- c(
 )
 
 ui <- fluidPage(
+            
   tags$head(
-            tags$meta(name = "viewport", 
+    tags$meta(name = "viewport", 
                      content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"),
             includeCSS("www/styles.css"),
-  tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "www/styles.css"),
     
     tags$script(HTML("
