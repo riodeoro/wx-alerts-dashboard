@@ -34,7 +34,7 @@ library(stringdist) # Added for metadata update functions
 library(readr)      # For read_csv
 
 # ---------- API Configuration ----------
-BASE_URL <- "el-086-api.elements360.aem.eco/aem/DataAPI"
+BASE_URL <- "https://el-086-api.elements360.aem.eco/aem/DataAPI"
 SYSTEM_KEY <- "6af158e4-53d9-4747-ad67-71197f689e1f"
 
 # ---------- Generic Caching Helper ----------
@@ -265,7 +265,7 @@ fetch_with_cache <- function(fetch_function, cache_container, cache_key, timesta
 # ---------- Function to fetch raw metadata from API ----------
 fetch_metadata_from_api <- function() {
   # Define the API endpoint
-  api_url <- "el-086-api.elements360.aem.eco/aem/DataAPI?method=GetSiteMetaData&system_key=6af158e4-53d9-4747-ad67-71197f689e1f&format=xml"
+  api_url <- "https://el-086-api.elements360.aem.eco/aem/DataAPI?method=GetSiteMetaData&system_key=6af158e4-53d9-4747-ad67-71197f689e1f&format=xml"
   
   tryCatch({
     # Fetch data directly from API
@@ -367,7 +367,7 @@ merge_metadata_sources <- function(static_metadata, api_metadata) {
   # Use update_metadata_from_api with the actual API URL
   # This preserves the station names and metadata from static_metadata
   # but adds the API site IDs where coordinates match
-  api_url <- "el-086-api.elements360.aem.eco/aem/DataAPI?method=GetSiteMetaData&system_key=6af158e4-53d9-4747-ad67-71197f689e1f&format=xml"
+  api_url <- "https://el-086-api.elements360.aem.eco/aem/DataAPI?method=GetSiteMetaData&system_key=6af158e4-53d9-4747-ad67-71197f689e1f&format=xml"
   
   merged_metadata <- update_metadata_from_api(
     api_url = api_url,
